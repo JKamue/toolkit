@@ -15,7 +15,7 @@ jobs:
         run: |
           # Remove the 'v' prefix if it exists
           echo ${{ github.ref_name }}
-          VERSION_CLEAN=${VERSION#v}
+          VERSION_CLEAN=${VERSION:23}
           JSON_STRING=$(printf '{"RegistryKey":"HKUD\\\\Software\\\\co-IT.eu GmbH\\\\Clockodo QuickActions\\\\Version", "Version":"%s"}' "$VERSION_CLEAN")
           echo $JSON_STRING > advinst_update.json
           readlink -e advinst_update.json
