@@ -22,7 +22,7 @@ jobs:
       - name: Advanced installer einrichten
         uses: caphyon/advinst-github-action@main
         with:
-          advinst-version: '21.1'
+          advinst-version: '21.9'
           advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
 
       - name: msbuild zu PATH hinzufügen
