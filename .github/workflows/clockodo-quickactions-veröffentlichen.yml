@@ -53,7 +53,7 @@ jobs:
           $versionClean = $env:VERSION.Substring(23)
           
           # JSON String erstellen
-          $jsonString = '{"RegistryKey":"HKUD\\\\Software\\\\co-IT.eu GmbH\\\\Clockodo QuickActions\\\\Version", "Version":"' + $versionClean + '"}'
+          $jsonString = '{"RegistryKey":"HKUD\\Software\\\\co-IT.eu GmbH\\Clockodo QuickActions\\Version", "Version":"' + $versionClean + '"}'
           
           # Datei erstellen
           $jsonString | Set-Content -Path advinst_update.json
